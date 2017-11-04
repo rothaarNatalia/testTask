@@ -6,6 +6,6 @@ of the assignment you are working on (where the build.sbt file is). Typing sbt w
  This is the shell of the operating system
 $ cd /path/to/testTask
 $ sbt
-# This is the sbt shell
+ This is the sbt shell
 >
 then type test
