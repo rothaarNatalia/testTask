@@ -62,8 +62,8 @@
       <file leaf-file-name="ProvidersSetSuit.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/testingproject/ProvidersSetSuit.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+            <state relative-caret-position="255">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="e#24#44#0" expanded="true" />
               </folding>
@@ -825,7 +825,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/test/scala/testingproject/ProvidersSetSuit.scala</url>
-          <line>75</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
@@ -1110,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/testingproject/ProvidersSetSuit.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+        <state relative-caret-position="255">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="e#24#44#0" expanded="true" />
           </folding>

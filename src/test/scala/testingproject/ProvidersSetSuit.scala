@@ -61,7 +61,6 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
     new ProviderSet {
       When("Get Response")
       val response = getRestContent(internet)
-      //assertResult(200, response.getStatusCode)
       Then("Check Status Code 2xx")
       response.getStatusCode must be(success)
       Then("Check Text Status OK")
