@@ -5,10 +5,7 @@ import org.asynchttpclient.Response
 import org.junit.runner.RunWith
 import org.scalatest.{BeforeAndAfterAll , FunSuite, GivenWhenThen, MustMatchers}
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.BeforeAndAfter
-import utils._
-import org.scalatest.Matchers._
-import play.api.libs.json.{JsValue, Json}
+import play.api.libs.json.{Json}
 import testingproject.matchers.{HttpResponseMatchers, JSONResponseMatchers}
 
 /**
@@ -32,8 +29,7 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
   def getRestContent(url: String, groupName: String): Response = {
 
     val httpResponse = httpClient.prepareGet(url).addQueryParam("groups", groupName).execute()
-    val entity = httpResponse.get()
-    entity
+    httpResponse.get()
   }
 
   override def afterAll() {
@@ -44,10 +40,7 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
   test("Provider transfer for ANONYMOUS should return ok") {
     new ProviderSet {
       When("Get Response")
-      //val groupName = "Переводы"
-//      val response = HttpHandler.getRestContent(url, transfer)
-val response = getRestContent(url, transfer)
-      //assertResult(200, response.getStatusCode)
+      val response = getRestContent(url, transfer)
       Then("Check Status Code 2xx")
       response.getStatusCode must be(success)
       Then("Check Text Status OK")
@@ -67,8 +60,6 @@ val response = getRestContent(url, transfer)
   test("Provider internet for ANONYMOUS should return ok") {
     new ProviderSet {
       When("Get Response")
-      //val groupName = "Переводы"
-      //val response = HttpHandler.getRestContent(url, internet)
       val response = getRestContent(url, internet)
       //assertResult(200, response.getStatusCode)
       Then("Check Status Code 2xx")
@@ -90,10 +81,7 @@ val response = getRestContent(url, transfer)
   test("Provider charity for ANONYMOUS should return ok") {
     new ProviderSet {
       When("Get Response")
-      //val groupName = "Переводы"
-      //val response = HttpHandler.getRestContent(url, charity)
       val response = getRestContent(url, charity)
-      //assertResult(200, response.getStatusCode)
       Then("Check Status Code 2xx")
       response.getStatusCode must be(success)
       Then("Check Text Status OK")

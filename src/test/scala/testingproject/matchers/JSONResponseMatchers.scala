@@ -1,6 +1,5 @@
 package testingproject.matchers
 
-import com.fasterxml.jackson.core.JsonParseException
 import org.scalatest.Matchers._
 import org.scalatest.matchers.{BeMatcher, MatchResult}
 import play.api.libs.json.JsValue

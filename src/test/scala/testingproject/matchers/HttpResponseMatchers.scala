@@ -9,8 +9,8 @@ trait HttpResponseMatchers {
     def apply(left: Int) =
       MatchResult(
         ((left >= 200) && (left < 300)),
-        left.toString + " was successed",
-        left.toString + " was failed"
+        left.toString + " was failed",
+        left.toString + " was successed"
       )
   }
   val success = new ResponseCodeMatcher
@@ -20,8 +20,8 @@ trait HttpResponseMatchers {
     def apply(left: String) =
       MatchResult(
         left == "OK",
-        left.toString + " was successed",
-        left.toString + " was failed"
+        left.toString + " was failed",
+        left.toString + " was successed"
       )
   }
   val ok = new ResponseTextCodeMatcher
