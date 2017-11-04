@@ -26,7 +26,7 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
 
   val httpClient =  Http.default.client
 
-  def getRestContent(url: String, groupName: String): Response = {
+  def getRestContent(groupName: String): Response = {
 
     val httpResponse = httpClient.prepareGet(url).addQueryParam("groups", groupName).execute()
     httpResponse.get()
@@ -40,7 +40,7 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
   test("Provider transfer for ANONYMOUS should return ok") {
     new ProviderSet {
       When("Get Response")
-      val response = getRestContent(url, transfer)
+      val response = getRestContent(transfer)
       Then("Check Status Code 2xx")
       response.getStatusCode must be(success)
       Then("Check Text Status OK")
@@ -60,7 +60,7 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
   test("Provider internet for ANONYMOUS should return ok") {
     new ProviderSet {
       When("Get Response")
-      val response = getRestContent(url, internet)
+      val response = getRestContent(internet)
       //assertResult(200, response.getStatusCode)
       Then("Check Status Code 2xx")
       response.getStatusCode must be(success)
@@ -81,7 +81,7 @@ class ProvidersSetSuit extends FunSuite with MustMatchers with HttpResponseMatch
   test("Provider charity for ANONYMOUS should return ok") {
     new ProviderSet {
       When("Get Response")
-      val response = getRestContent(url, charity)
+      val response = getRestContent(charity)
       Then("Check Status Code 2xx")
       response.getStatusCode must be(success)
       Then("Check Text Status OK")
